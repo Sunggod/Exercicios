@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calculadora {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #resultado {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .img-container{
+            display: flex;
+            align-items: center;
+        }
+        .img-container h1,
+        .img-container img{
+            transition: 500ms;
+        }
+        .img-container h1:hover{
+            color: rgba(201, 153, 22, 0.452);
+        }
+        .img-container img:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="img-container">
+            <img src="cf160b4a-2be0-403a-9d5c-4a3d195963ee.png" height="80">
+            <h1>Media Notas</h1>
+        </div>
+        <input type="number" id="nota1" placeholder="Primeira nota">
+        <input type="number" id="nota2" placeholder="Segunda nota">
+        <input type="number" id="nota3" placeholder="Segunda nota">
+
+        <button onclick="calcular()">Calcular</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcular() {
+            const nota1 = parseFloat(document.getElementById('nota1').value);
+            const nota2 = parseFloat(document.getElementById('nota2').value);
+            const nota3 = parseFloat(document.getElementById('nota3').value);
+            let soma = (nota1 + nota2 + nota3)/3
+            let resultado;
+            if(soma < 4){
+                resultado= "Aluno reprovado"
+            }else if (soma >= 4 && soma < 7){
+                resultado="Aluno em recuperação"
+            }
+            else{
+                resultado="Aluno Aprovado"
+            }
+            document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de peso Real</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="cf160b4a-2be0-403a-9d5c-4a3d195963ee.png" height="200" alt="">
+        </div>
+        <h1>Programa de peso ideal</h1>
+        <form>
+            <p>
+                Nome:
+                <input type="text" id="inNome" required>
+            </p>
+            <div class="checkbox">
+                <p>
+                    Sexo:
+                    <input type="radio" name="Sexo" id="inMasculino"  required >Masculino
+                </p>
+                <p>
+                    <input type="radio" name="Sexo"  id="inFeminino" required>Feminino
+                </p>
+            </div>
+            <p>
+                Altura:
+                <input type="number" min="0" step="00.1" id="inAltura" required>
+            </p>
+            <div>
+                <input type="submit" value="Calcular peso ideal">
+                <input type="reset" value="Limpar Campos">
+            </div>
+        </form>
+        <h3></h3>
+    </div>
+    <script src="Exercicios.js"></script>
+</body>
+
+</html>
